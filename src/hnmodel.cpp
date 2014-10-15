@@ -40,6 +40,10 @@ QVariant HnModel::data(const QModelIndex &index, int role) const
     HnModelItem* item = m_items.value(itemId);
     if (!item) {
         ((HnModel*)this)->requestItem(itemId);
+        if (role == RoleTitle) {
+            return tr("Loading...");
+        }
+
         return QVariant();
     }
 

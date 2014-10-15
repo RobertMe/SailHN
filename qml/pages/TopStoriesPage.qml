@@ -5,7 +5,7 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
-    property alias model: listView.model
+    property variant model: topStories
 
     allowedOrientations: Orientation.All
 
@@ -16,18 +16,25 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Refresh")
-                onClicked: model.refresh()
+                onClicked: page.model.refresh()
             }
         }
 
         header: PageHeader {
             title: qsTr("Top Stories")
         }
-        model: topStories
+        model: page.model
 
         delegate: ListItem {
             width: parent.width
             contentHeight: column.height + (Theme.paddingSmall * 2)
+
+            onClicked: {
+                var item = page.model.get(index);
+                if (item.url) {
+                    pageStack.push(Qt.resolvedUrl("BrowserPage.qml"), {item: item});
+                }
+            }
 
             Column {
                 id: column

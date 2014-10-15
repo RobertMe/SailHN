@@ -29,6 +29,7 @@ public:
     explicit HnModel(QObject *parent = 0);
 
     void setItemIds(const QList<int> &itemIds);
+    Q_INVOKABLE HnModelItem *get(const int index) const;
 
     int rowCount(const QModelIndex & parent = QModelIndex()) const;
     QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const;

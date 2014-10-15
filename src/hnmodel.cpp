@@ -20,6 +20,20 @@ void HnModel::setItemIds(const QList<int> &itemIds)
     endResetModel();
 }
 
+HnModelItem *HnModel::get(const int index) const
+{
+    if (index < 0 || index >= m_itemIds.size()) {
+        return 0;
+    }
+
+    int itemId = m_itemIds.at(index);
+    if (!m_items.contains(itemId)) {
+        return 0;
+    }
+
+    return m_items[itemId];
+}
+
 int HnModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);

@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     TopStories topStories;
 
     qmlRegisterType<HnLimitModel>("harbour.sailhn", 1, 0, "HnLimitModel");
+    qmlRegisterType<HnModelItem>();
     qmlRegisterUncreatableType<QAbstractItemModel>("harbour.sailhn", 1, 0, "AbstractItemModel", "used to support sourceModel property of HnFilterModel");
 
     QQuickView *view = SailfishApp::createView();

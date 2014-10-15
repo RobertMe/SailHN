@@ -28,7 +28,8 @@ OTHER_FILES += qml/SailHN.qml \
     rpm/SailHN.yaml \
     translations/*.ts \
     SailHN.desktop \
-    qml/pages/TopStoriesPage.qml
+    qml/pages/TopStoriesPage.qml \
+    qml/pages/BrowserPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

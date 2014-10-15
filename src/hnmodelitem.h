@@ -5,7 +5,7 @@
 #include <QDateTime>
 #include <QUrl>
 
-class HnModelItem : QObject
+class HnModelItem : public QObject
 {
     Q_OBJECT
     Q_ENUMS(Types)

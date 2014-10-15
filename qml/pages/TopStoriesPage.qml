@@ -5,8 +5,18 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
+    property alias model: listView.model
+
     SilicaListView {
+        id: listView
         anchors.fill: parent
+
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Refresh")
+                onClicked: model.refresh()
+            }
+        }
 
         header: PageHeader {
             title: qsTr("Top Stories")

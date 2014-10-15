@@ -12,6 +12,8 @@ class TopStories : public HnModel
 public:
     explicit TopStories(QObject *parent = 0);
 
+    Q_INVOKABLE void refresh();
+
 signals:
 
 public slots:

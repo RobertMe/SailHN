@@ -18,7 +18,8 @@ SOURCES += src/SailHN.cpp \
     src/hnmodel.cpp \
     src/topstories.cpp \
     src/hnmodelitem.cpp \
-    src/hnconnection.cpp
+    src/hnconnection.cpp \
+    src/hnlimitmodel.cpp
 
 OTHER_FILES += qml/SailHN.qml \
     qml/cover/CoverPage.qml \
@@ -38,5 +39,6 @@ HEADERS += \
     src/hnmodel.h \
     src/topstories.h \
     src/hnmodelitem.h \
-    src/hnconnection.h
+    src/hnconnection.h \
+    src/hnlimitmodel.h
 

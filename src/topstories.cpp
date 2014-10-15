@@ -12,6 +12,11 @@ TopStories::TopStories(QObject *parent) :
     requestTopStories();
 }
 
+void TopStories::refresh()
+{
+    requestTopStories();
+}
+
 void TopStories::requestTopStories()
 {
     HnConnection::instance()->get("v0/topstories.json", this, "topStoriesReceived");

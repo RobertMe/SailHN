@@ -7,6 +7,8 @@ Page {
 
     property alias model: listView.model
 
+    allowedOrientations: Orientation.All
+
     SilicaListView {
         id: listView
         anchors.fill: parent
